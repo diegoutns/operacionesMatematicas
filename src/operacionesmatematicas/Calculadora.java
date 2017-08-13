@@ -16,9 +16,14 @@ public class Calculadora {
         return resultadoResta;
     }
     
-    public int Dividir(int dividendo, int divisor){
-        int resultadoDividir = dividendo / divisor;
-        return resultadoDividir;
+    public int Dividir(int dividendo, int divisor) throws Exception{
+        if (dividendo % divisor == 0){
+            int resultadoDividir = dividendo / divisor;
+            return resultadoDividir = dividendo / divisor;
+        }
+        else{
+            throw new Exception("Error resultado no entero");
+        }
     }
     
     public int Multiplicar(int multiplicando1, int multiplicando2){

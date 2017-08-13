@@ -5,6 +5,8 @@
  */
 package operacionesmatematicas;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -63,13 +65,33 @@ public class CalculadoraTest {
      * Test of Dividir method, of class Calculadora.
      */
     @Test
-    public void testDividir() {
+    public void testDividir() throws Exception {
         System.out.println("Test Dividir");
         int dividendo = 4;
         int divisor = 2;
         Calculadora instance = new Calculadora();
         int expResult = 2;
         int result = instance.Dividir(dividendo, divisor);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("Fallo Dividir.");
+    }
+    /**
+     * Test of Dividir method, of class Calculadora.
+     */
+    @Test
+    public void testDividirResultadoNoEntero() {
+        System.out.println("Test DividirResultadoNoEntero");
+        int dividendo = 1;
+        int divisor = 3;
+        Calculadora instance = new Calculadora();
+        String expResult = "Error resultado no entero";
+        String result = "";
+        try {
+            instance.Dividir(dividendo, divisor);
+        } catch (Exception ex) {
+            result = ex.getMessage();
+        }
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("Fallo Dividir.");
