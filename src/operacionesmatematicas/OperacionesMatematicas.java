@@ -10,7 +10,16 @@ public class OperacionesMatematicas {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Calculadora calc = new Calculadora();
+        String tipo="Docente";
+        String mail="juan@gmail.com";
+        String pass="abc123";
+        
+        AccesoAlPrograma ap1=new AccesoAlPrograma();
+        ap1.LoguearUsuario(tipo, mail, pass);
+        IngresoCalculadora ing=new IngresoCalculadora();
+        //Calculadora calc = new Calculadora();
+        Calculadora calc=ing.abrirCalcuadora(tipo, 0);
+        
         System.out.println("Sumar 1 mas 3 = " + calc.Sumar(1, 3));
         System.out.println("Restarle a 2 el numero 3 = " + calc.Restar(2, 3));
         try{
