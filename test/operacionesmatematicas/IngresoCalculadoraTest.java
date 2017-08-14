@@ -41,16 +41,63 @@ public class IngresoCalculadoraTest {
      * Test of abrirCalcuadora method, of class IngresoCalculadora.
      */
     @Test
-    public void testAbrirCalcuadora() {
-        System.out.println("abrirCalcuadora");
-        String tipoUsario = "";
+    public void testAbrirCalcuadoraSiendoDocente() {
+        System.out.println("abrirCalcuadora Siendo Docente");
+        String tipoUsario = "Docente";
         int nivel = 0;
+        IngresoCalculadora instance = new IngresoCalculadora();
+        Calculadora expResult = null;
+        Calculadora result = instance.abrirCalcuadora(tipoUsario, nivel);
+        //assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        if (result==null) {
+            System.out.println("XX NO supera la prueba XX");
+            fail("The test case is a prototype.");
+        } else {
+            System.out.println("++ Pasa la prueba ++ ");
+        }
+        
+    }
+    
+    /**
+     * Test of abrirCalcuadora method, of class IngresoCalculadora.
+     */
+    @Test
+    public void testAbrirCalcuadoraSiendoAlumnoAvanzado() {
+        System.out.println("abrirCalcuadora Siendo Alumno Avanzado");
+        String tipoUsario = "Alumno";
+        int nivel = 4;
+        IngresoCalculadora instance = new IngresoCalculadora();
+        Calculadora expResult = null;
+        Calculadora result = instance.abrirCalcuadora(tipoUsario, nivel);
+        //assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        if (result.equals(expResult)) {
+            System.out.println("XX NO supera la prueba XX");
+            fail("The test case is a prototype.");
+        } else {
+            System.out.println("++ Pasa la Prueba ++");
+        }
+        
+    }
+    /**
+     * Test of abrirCalcuadora method, of class IngresoCalculadora.
+     */
+    @Test
+    public void testAbrirCalcuadoraSiendoAlumnoPrincipiante() {
+        System.out.println("abrirCalcuadora siendo Alumno Principiante **");
+        String tipoUsario = "Alumno";
+        int nivel = 3;
         IngresoCalculadora instance = new IngresoCalculadora();
         Calculadora expResult = null;
         Calculadora result = instance.abrirCalcuadora(tipoUsario, nivel);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        if (result==null) {
+            System.out.println("++ Pasa la Prueba ++");
+        } else {
+            System.out.println("XX NO supera la pueba XX");
+            fail("The test case is a prototype");
+        }
     }
-    
 }
