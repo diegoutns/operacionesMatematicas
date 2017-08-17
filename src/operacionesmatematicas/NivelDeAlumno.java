@@ -7,7 +7,7 @@ package operacionesmatematicas;
 
 /**
  *
- * @author Valeria
+ * @author Jennifer
  */
 public class NivelDeAlumno {
 
