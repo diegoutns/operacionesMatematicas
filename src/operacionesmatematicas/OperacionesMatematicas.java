@@ -28,6 +28,13 @@ public class OperacionesMatematicas {
         catch(Exception ex){
             System.out.println(ex.getMessage());
         }
+        try{
+            System.out.println("Dividir 3 por 0 = " + calc.Dividir(3, 0));
+        }
+        catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        System.out.println("Sumar 1.4 mas 3.5 = " + calc.Sumar((int)1.4, (int)3.5));
     }
     
 }

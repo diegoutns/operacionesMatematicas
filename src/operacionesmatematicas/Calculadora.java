@@ -17,6 +17,8 @@ public class Calculadora {
     }
     
     public int Dividir(int dividendo, int divisor) throws Exception{
+        if (divisor == 0)
+            throw new Exception("Error division por cero");
         if (dividendo % divisor == 0){
             int resultadoDividir = dividendo / divisor;
             return resultadoDividir = dividendo / divisor;

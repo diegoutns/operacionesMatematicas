@@ -5,22 +5,20 @@
  */
 package operacionesmatematicas;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import org.junit.After;
 import org.junit.AfterClass;
+import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import org.junit.Before;
 
 /**
  *
- * @author DiegoB
+ * @author viznney
  */
-public class CalculadoraTest {
+public class CalculadoraIT {
     
-    public CalculadoraTest() {
+    public CalculadoraIT() {
     }
     
     @BeforeClass
@@ -30,13 +28,13 @@ public class CalculadoraTest {
     @AfterClass
     public static void tearDownClass() {
     }
-
+    
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
     }
-
+    
     @After
-    public void tearDown() throws Exception {
+    public void tearDown() {
     }
 
     /**
@@ -106,7 +104,7 @@ public class CalculadoraTest {
         // TODO review the generated test code and remove the default call to fail.
         //fail("Fallo Dividir.");
     }
-    @Test
+    
     public void testDividirPorCero() {
         System.out.println("Test DividirPorCero");
         int dividendo = 3;
@@ -138,19 +136,6 @@ public class CalculadoraTest {
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("Fallo Multiplicar.");
-    }
-    
-    @Test
-    public void testSumarNumerosRacionales() {
-        System.out.println("Test Sumar");
-        int sumando1 = (int) 1.4;
-        int sumando2 = (int) 3.5;
-        Calculadora instance = new Calculadora();
-        float expResult = (float)4.9;
-        int result = instance.Sumar(sumando1, sumando2);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        //fail("Fallo Sumar.");
     }
     
 }
