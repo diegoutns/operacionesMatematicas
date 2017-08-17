@@ -7,10 +7,12 @@ package operacionesmatematicas;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.Before;
 
 /**
  *
@@ -27,6 +29,14 @@ public class CalculadoraTest {
     
     @AfterClass
     public static void tearDownClass() {
+    }
+
+    @Before
+    public void setUp() throws Exception {
+    }
+
+    @After
+    public void tearDown() throws Exception {
     }
 
     /**
@@ -86,6 +96,23 @@ public class CalculadoraTest {
         int divisor = 3;
         Calculadora instance = new Calculadora();
         String expResult = "Error resultado no entero";
+        String result = "";
+        try {
+            instance.Dividir(dividendo, divisor);
+        } catch (Exception ex) {
+            result = ex.getMessage();
+        }
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("Fallo Dividir.");
+    }
+    @Test
+    public void testDividirPorCero() {
+        System.out.println("Test DividirPorCero");
+        int dividendo = 3;
+        int divisor = 0;
+        Calculadora instance = new Calculadora();
+        String expResult = "Error division por cero";
         String result = "";
         try {
             instance.Dividir(dividendo, divisor);
