@@ -153,4 +153,29 @@ public class CalculadoraTest {
         //fail("Fallo Sumar.");
     }
     
+    /**
+     * Test of Precedencia Operadores method, of class Calculadora.
+     */
+    @Test
+    public void tesPrecedenciaOperadores() {
+        System.out.println("Test Precedencia Operadores");
+        String operacion = "32+21*5";
+        Calculadora instance = new Calculadora();
+        int expResult = 137;
+        int result = instance.Operar(operacion);
+        assertEquals(expResult, result);
+    }
+    /**
+     * Test of Precedencia Parentesis method, of class Calculadora.
+     */
+    @Test
+    public void tesPrecedenciaParentesis() {
+        System.out.println("Test Precedencia Parentesis");
+        String operacion = "26*(21-15)";
+        Calculadora instance = new Calculadora();
+        int expResult = 156;
+        int result = instance.Operar(operacion);
+        assertEquals(expResult, result);
+    }
+
 }
